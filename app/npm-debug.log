@@ -1,0 +1,856 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/package/host/localhost/nodejs-0.10.43/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.29
+3 info using node@v0.10.43
+4 warn deprecated This version of npm lacks support for important features,
+5 warn deprecated such as scoped packages, offered by the primary npm
+6 warn deprecated registry. Consider upgrading to at least npm@2, if not the
+7 warn deprecated latest stable version. To upgrade to npm@2, run:
+8 warn deprecated npm -g install npm@latest-2
+9 warn deprecated To upgrade to the latest stable version, run:
+10 warn deprecated npm -g install npm@latest
+11 warn deprecated (Depending on how Node.js was installed on your system, you
+12 warn deprecated may need to prefix the preceding commands with `sudo`, or if
+13 warn deprecated on Windows, run them from an Administrator prompt.)
+14 warn deprecated If you're running the version of npm bundled with
+15 warn deprecated Node.js 0.10 LTS, be aware that the next version of 0.10 LTS
+16 warn deprecated will be bundled with a version of npm@2, which has some small
+17 warn deprecated backwards-incompatible changes made to `npm run-script` and
+18 warn deprecated semver behavior.
+19 warn package.json statapp@1.0.0 No description
+20 warn package.json statapp@1.0.0 No repository field.
+21 warn package.json statapp@1.0.0 No README data
+22 verbose readDependencies using package.json deps
+23 verbose install where, deps [ '/var/www/virtual/maxpower/html/App/root/app',
+23 verbose install   [ 'autobind-decorator',
+23 verbose install     'babel',
+23 verbose install     'babelify',
+23 verbose install     'browser-sync',
+23 verbose install     'browserify',
+23 verbose install     'connect-history-api-fallback',
+23 verbose install     'firebase',
+23 verbose install     'gulp',
+23 verbose install     'gulp-autoprefixer',
+23 verbose install     'gulp-notify',
+23 verbose install     'gulp-rename',
+23 verbose install     'gulp-stylus',
+23 verbose install     'gulp-uglify',
+23 verbose install     'gulp-util',
+23 verbose install     'history',
+23 verbose install     'install',
+23 verbose install     're-base',
+23 verbose install     'react',
+23 verbose install     'react-addons-css-transition-group',
+23 verbose install     'react-dom',
+23 verbose install     'react-catalyst',
+23 verbose install     'react-mixin',
+23 verbose install     'react-router',
+23 verbose install     'vinyl-buffer',
+23 verbose install     'vinyl-source-stream',
+23 verbose install     'watchify' ] ]
+24 info preinstall statapp@1.0.0
+25 verbose readDependencies using package.json deps
+26 verbose cache add [ 'babelify@6.4.0', null ]
+27 verbose cache add name=undefined spec="babelify@6.4.0" args=["babelify@6.4.0",null]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'babelify@6.4.0',
+28 verbose parsed url   path: 'babelify@6.4.0',
+28 verbose parsed url   href: 'babelify@6.4.0' }
+29 verbose cache add [ 'browser-sync@2.9.11', null ]
+30 verbose cache add name=undefined spec="browser-sync@2.9.11" args=["browser-sync@2.9.11",null]
+31 verbose parsed url { protocol: null,
+31 verbose parsed url   slashes: null,
+31 verbose parsed url   auth: null,
+31 verbose parsed url   host: null,
+31 verbose parsed url   port: null,
+31 verbose parsed url   hostname: null,
+31 verbose parsed url   hash: null,
+31 verbose parsed url   search: null,
+31 verbose parsed url   query: null,
+31 verbose parsed url   pathname: 'browser-sync@2.9.11',
+31 verbose parsed url   path: 'browser-sync@2.9.11',
+31 verbose parsed url   href: 'browser-sync@2.9.11' }
+32 verbose cache add [ 'browserify@11.2.0', null ]
+33 verbose cache add name=undefined spec="browserify@11.2.0" args=["browserify@11.2.0",null]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: 'browserify@11.2.0',
+34 verbose parsed url   path: 'browserify@11.2.0',
+34 verbose parsed url   href: 'browserify@11.2.0' }
+35 verbose cache add [ 'connect-history-api-fallback@1.1.0', null ]
+36 verbose cache add name=undefined spec="connect-history-api-fallback@1.1.0" args=["connect-history-api-fallback@1.1.0",null]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: 'connect-history-api-fallback@1.1.0',
+37 verbose parsed url   path: 'connect-history-api-fallback@1.1.0',
+37 verbose parsed url   href: 'connect-history-api-fallback@1.1.0' }
+38 verbose cache add [ 'firebase@2.3.1', null ]
+39 verbose cache add name=undefined spec="firebase@2.3.1" args=["firebase@2.3.1",null]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: 'firebase@2.3.1',
+40 verbose parsed url   path: 'firebase@2.3.1',
+40 verbose parsed url   href: 'firebase@2.3.1' }
+41 verbose cache add [ 'gulp@3.9.0', null ]
+42 verbose cache add name=undefined spec="gulp@3.9.0" args=["gulp@3.9.0",null]
+43 verbose parsed url { protocol: null,
+43 verbose parsed url   slashes: null,
+43 verbose parsed url   auth: null,
+43 verbose parsed url   host: null,
+43 verbose parsed url   port: null,
+43 verbose parsed url   hostname: null,
+43 verbose parsed url   hash: null,
+43 verbose parsed url   search: null,
+43 verbose parsed url   query: null,
+43 verbose parsed url   pathname: 'gulp@3.9.0',
+43 verbose parsed url   path: 'gulp@3.9.0',
+43 verbose parsed url   href: 'gulp@3.9.0' }
+44 verbose cache add [ 'gulp-autoprefixer@3.1.0', null ]
+45 verbose cache add name=undefined spec="gulp-autoprefixer@3.1.0" args=["gulp-autoprefixer@3.1.0",null]
+46 verbose parsed url { protocol: null,
+46 verbose parsed url   slashes: null,
+46 verbose parsed url   auth: null,
+46 verbose parsed url   host: null,
+46 verbose parsed url   port: null,
+46 verbose parsed url   hostname: null,
+46 verbose parsed url   hash: null,
+46 verbose parsed url   search: null,
+46 verbose parsed url   query: null,
+46 verbose parsed url   pathname: 'gulp-autoprefixer@3.1.0',
+46 verbose parsed url   path: 'gulp-autoprefixer@3.1.0',
+46 verbose parsed url   href: 'gulp-autoprefixer@3.1.0' }
+47 verbose cache add [ 'gulp-notify@2.2.0', null ]
+48 verbose cache add name=undefined spec="gulp-notify@2.2.0" args=["gulp-notify@2.2.0",null]
+49 verbose parsed url { protocol: null,
+49 verbose parsed url   slashes: null,
+49 verbose parsed url   auth: null,
+49 verbose parsed url   host: null,
+49 verbose parsed url   port: null,
+49 verbose parsed url   hostname: null,
+49 verbose parsed url   hash: null,
+49 verbose parsed url   search: null,
+49 verbose parsed url   query: null,
+49 verbose parsed url   pathname: 'gulp-notify@2.2.0',
+49 verbose parsed url   path: 'gulp-notify@2.2.0',
+49 verbose parsed url   href: 'gulp-notify@2.2.0' }
+50 verbose cache add [ 'gulp-rename@1.2.2', null ]
+51 verbose cache add name=undefined spec="gulp-rename@1.2.2" args=["gulp-rename@1.2.2",null]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: 'gulp-rename@1.2.2',
+52 verbose parsed url   path: 'gulp-rename@1.2.2',
+52 verbose parsed url   href: 'gulp-rename@1.2.2' }
+53 verbose cache add [ 'gulp-stylus@2.1.0', null ]
+54 verbose cache add name=undefined spec="gulp-stylus@2.1.0" args=["gulp-stylus@2.1.0",null]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: 'gulp-stylus@2.1.0',
+55 verbose parsed url   path: 'gulp-stylus@2.1.0',
+55 verbose parsed url   href: 'gulp-stylus@2.1.0' }
+56 verbose cache add [ 'gulp-uglify@1.4.2', null ]
+57 verbose cache add name=undefined spec="gulp-uglify@1.4.2" args=["gulp-uglify@1.4.2",null]
+58 verbose parsed url { protocol: null,
+58 verbose parsed url   slashes: null,
+58 verbose parsed url   auth: null,
+58 verbose parsed url   host: null,
+58 verbose parsed url   port: null,
+58 verbose parsed url   hostname: null,
+58 verbose parsed url   hash: null,
+58 verbose parsed url   search: null,
+58 verbose parsed url   query: null,
+58 verbose parsed url   pathname: 'gulp-uglify@1.4.2',
+58 verbose parsed url   path: 'gulp-uglify@1.4.2',
+58 verbose parsed url   href: 'gulp-uglify@1.4.2' }
+59 verbose cache add name="babelify" spec="6.4.0" args=["babelify","6.4.0"]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: '6.4.0',
+60 verbose parsed url   path: '6.4.0',
+60 verbose parsed url   href: '6.4.0' }
+61 verbose addNamed [ 'babelify', '6.4.0' ]
+62 verbose addNamed [ '6.4.0', '6.4.0' ]
+63 verbose cache add name="browser-sync" spec="2.9.11" args=["browser-sync","2.9.11"]
+64 verbose parsed url { protocol: null,
+64 verbose parsed url   slashes: null,
+64 verbose parsed url   auth: null,
+64 verbose parsed url   host: null,
+64 verbose parsed url   port: null,
+64 verbose parsed url   hostname: null,
+64 verbose parsed url   hash: null,
+64 verbose parsed url   search: null,
+64 verbose parsed url   query: null,
+64 verbose parsed url   pathname: '2.9.11',
+64 verbose parsed url   path: '2.9.11',
+64 verbose parsed url   href: '2.9.11' }
+65 verbose addNamed [ 'browser-sync', '2.9.11' ]
+66 verbose addNamed [ '2.9.11', '2.9.11' ]
+67 verbose cache add name="browserify" spec="11.2.0" args=["browserify","11.2.0"]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: '11.2.0',
+68 verbose parsed url   path: '11.2.0',
+68 verbose parsed url   href: '11.2.0' }
+69 verbose addNamed [ 'browserify', '11.2.0' ]
+70 verbose addNamed [ '11.2.0', '11.2.0' ]
+71 verbose cache add name="connect-history-api-fallback" spec="1.1.0" args=["connect-history-api-fallback","1.1.0"]
+72 verbose parsed url { protocol: null,
+72 verbose parsed url   slashes: null,
+72 verbose parsed url   auth: null,
+72 verbose parsed url   host: null,
+72 verbose parsed url   port: null,
+72 verbose parsed url   hostname: null,
+72 verbose parsed url   hash: null,
+72 verbose parsed url   search: null,
+72 verbose parsed url   query: null,
+72 verbose parsed url   pathname: '1.1.0',
+72 verbose parsed url   path: '1.1.0',
+72 verbose parsed url   href: '1.1.0' }
+73 verbose addNamed [ 'connect-history-api-fallback', '1.1.0' ]
+74 verbose addNamed [ '1.1.0', '1.1.0' ]
+75 verbose cache add name="firebase" spec="2.3.1" args=["firebase","2.3.1"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '2.3.1',
+76 verbose parsed url   path: '2.3.1',
+76 verbose parsed url   href: '2.3.1' }
+77 verbose addNamed [ 'firebase', '2.3.1' ]
+78 verbose addNamed [ '2.3.1', '2.3.1' ]
+79 verbose cache add name="gulp" spec="3.9.0" args=["gulp","3.9.0"]
+80 verbose parsed url { protocol: null,
+80 verbose parsed url   slashes: null,
+80 verbose parsed url   auth: null,
+80 verbose parsed url   host: null,
+80 verbose parsed url   port: null,
+80 verbose parsed url   hostname: null,
+80 verbose parsed url   hash: null,
+80 verbose parsed url   search: null,
+80 verbose parsed url   query: null,
+80 verbose parsed url   pathname: '3.9.0',
+80 verbose parsed url   path: '3.9.0',
+80 verbose parsed url   href: '3.9.0' }
+81 verbose addNamed [ 'gulp', '3.9.0' ]
+82 verbose addNamed [ '3.9.0', '3.9.0' ]
+83 verbose cache add name="gulp-autoprefixer" spec="3.1.0" args=["gulp-autoprefixer","3.1.0"]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: '3.1.0',
+84 verbose parsed url   path: '3.1.0',
+84 verbose parsed url   href: '3.1.0' }
+85 verbose addNamed [ 'gulp-autoprefixer', '3.1.0' ]
+86 verbose addNamed [ '3.1.0', '3.1.0' ]
+87 verbose cache add name="gulp-notify" spec="2.2.0" args=["gulp-notify","2.2.0"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '2.2.0',
+88 verbose parsed url   path: '2.2.0',
+88 verbose parsed url   href: '2.2.0' }
+89 verbose addNamed [ 'gulp-notify', '2.2.0' ]
+90 verbose addNamed [ '2.2.0', '2.2.0' ]
+91 verbose cache add name="gulp-rename" spec="1.2.2" args=["gulp-rename","1.2.2"]
+92 verbose parsed url { protocol: null,
+92 verbose parsed url   slashes: null,
+92 verbose parsed url   auth: null,
+92 verbose parsed url   host: null,
+92 verbose parsed url   port: null,
+92 verbose parsed url   hostname: null,
+92 verbose parsed url   hash: null,
+92 verbose parsed url   search: null,
+92 verbose parsed url   query: null,
+92 verbose parsed url   pathname: '1.2.2',
+92 verbose parsed url   path: '1.2.2',
+92 verbose parsed url   href: '1.2.2' }
+93 verbose addNamed [ 'gulp-rename', '1.2.2' ]
+94 verbose addNamed [ '1.2.2', '1.2.2' ]
+95 verbose cache add name="gulp-stylus" spec="2.1.0" args=["gulp-stylus","2.1.0"]
+96 verbose parsed url { protocol: null,
+96 verbose parsed url   slashes: null,
+96 verbose parsed url   auth: null,
+96 verbose parsed url   host: null,
+96 verbose parsed url   port: null,
+96 verbose parsed url   hostname: null,
+96 verbose parsed url   hash: null,
+96 verbose parsed url   search: null,
+96 verbose parsed url   query: null,
+96 verbose parsed url   pathname: '2.1.0',
+96 verbose parsed url   path: '2.1.0',
+96 verbose parsed url   href: '2.1.0' }
+97 verbose addNamed [ 'gulp-stylus', '2.1.0' ]
+98 verbose addNamed [ '2.1.0', '2.1.0' ]
+99 verbose cache add name="gulp-uglify" spec="1.4.2" args=["gulp-uglify","1.4.2"]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: '1.4.2',
+100 verbose parsed url   path: '1.4.2',
+100 verbose parsed url   href: '1.4.2' }
+101 verbose addNamed [ 'gulp-uglify', '1.4.2' ]
+102 verbose addNamed [ '1.4.2', '1.4.2' ]
+103 verbose cache add [ 'gulp-util@3.0.7', null ]
+104 verbose cache add name=undefined spec="gulp-util@3.0.7" args=["gulp-util@3.0.7",null]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: 'gulp-util@3.0.7',
+105 verbose parsed url   path: 'gulp-util@3.0.7',
+105 verbose parsed url   href: 'gulp-util@3.0.7' }
+106 verbose cache add [ 'history@1.12.5', null ]
+107 verbose cache add name=undefined spec="history@1.12.5" args=["history@1.12.5",null]
+108 verbose parsed url { protocol: null,
+108 verbose parsed url   slashes: null,
+108 verbose parsed url   auth: null,
+108 verbose parsed url   host: null,
+108 verbose parsed url   port: null,
+108 verbose parsed url   hostname: null,
+108 verbose parsed url   hash: null,
+108 verbose parsed url   search: null,
+108 verbose parsed url   query: null,
+108 verbose parsed url   pathname: 'history@1.12.5',
+108 verbose parsed url   path: 'history@1.12.5',
+108 verbose parsed url   href: 'history@1.12.5' }
+109 verbose cache add [ 'install@0.1.8', null ]
+110 verbose cache add name=undefined spec="install@0.1.8" args=["install@0.1.8",null]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: 'install@0.1.8',
+111 verbose parsed url   path: 'install@0.1.8',
+111 verbose parsed url   href: 'install@0.1.8' }
+112 verbose cache add [ 're-base@1.2.1', null ]
+113 verbose cache add name=undefined spec="re-base@1.2.1" args=["re-base@1.2.1",null]
+114 verbose parsed url { protocol: null,
+114 verbose parsed url   slashes: null,
+114 verbose parsed url   auth: null,
+114 verbose parsed url   host: null,
+114 verbose parsed url   port: null,
+114 verbose parsed url   hostname: null,
+114 verbose parsed url   hash: null,
+114 verbose parsed url   search: null,
+114 verbose parsed url   query: null,
+114 verbose parsed url   pathname: 're-base@1.2.1',
+114 verbose parsed url   path: 're-base@1.2.1',
+114 verbose parsed url   href: 're-base@1.2.1' }
+115 verbose cache add [ 'react@^15.0.0', null ]
+116 verbose cache add name=undefined spec="react@^15.0.0" args=["react@^15.0.0",null]
+117 verbose parsed url { protocol: null,
+117 verbose parsed url   slashes: null,
+117 verbose parsed url   auth: null,
+117 verbose parsed url   host: null,
+117 verbose parsed url   port: null,
+117 verbose parsed url   hostname: null,
+117 verbose parsed url   hash: null,
+117 verbose parsed url   search: null,
+117 verbose parsed url   query: null,
+117 verbose parsed url   pathname: 'react@^15.0.0',
+117 verbose parsed url   path: 'react@^15.0.0',
+117 verbose parsed url   href: 'react@^15.0.0' }
+118 verbose cache add [ 'react-addons-css-transition-group@^15.0.0', null ]
+119 verbose cache add name=undefined spec="react-addons-css-transition-group@^15.0.0" args=["react-addons-css-transition-group@^15.0.0",null]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: 'react-addons-css-transition-group@^15.0.0',
+120 verbose parsed url   path: 'react-addons-css-transition-group@^15.0.0',
+120 verbose parsed url   href: 'react-addons-css-transition-group@^15.0.0' }
+121 verbose cache add [ 'react-dom@^15.0.0', null ]
+122 verbose cache add name=undefined spec="react-dom@^15.0.0" args=["react-dom@^15.0.0",null]
+123 verbose parsed url { protocol: null,
+123 verbose parsed url   slashes: null,
+123 verbose parsed url   auth: null,
+123 verbose parsed url   host: null,
+123 verbose parsed url   port: null,
+123 verbose parsed url   hostname: null,
+123 verbose parsed url   hash: null,
+123 verbose parsed url   search: null,
+123 verbose parsed url   query: null,
+123 verbose parsed url   pathname: 'react-dom@^15.0.0',
+123 verbose parsed url   path: 'react-dom@^15.0.0',
+123 verbose parsed url   href: 'react-dom@^15.0.0' }
+124 verbose cache add [ 'react-catalyst@0.3.0', null ]
+125 verbose cache add name=undefined spec="react-catalyst@0.3.0" args=["react-catalyst@0.3.0",null]
+126 verbose parsed url { protocol: null,
+126 verbose parsed url   slashes: null,
+126 verbose parsed url   auth: null,
+126 verbose parsed url   host: null,
+126 verbose parsed url   port: null,
+126 verbose parsed url   hostname: null,
+126 verbose parsed url   hash: null,
+126 verbose parsed url   search: null,
+126 verbose parsed url   query: null,
+126 verbose parsed url   pathname: 'react-catalyst@0.3.0',
+126 verbose parsed url   path: 'react-catalyst@0.3.0',
+126 verbose parsed url   href: 'react-catalyst@0.3.0' }
+127 verbose cache add [ 'react-mixin@3.0.0', null ]
+128 verbose cache add name=undefined spec="react-mixin@3.0.0" args=["react-mixin@3.0.0",null]
+129 verbose parsed url { protocol: null,
+129 verbose parsed url   slashes: null,
+129 verbose parsed url   auth: null,
+129 verbose parsed url   host: null,
+129 verbose parsed url   port: null,
+129 verbose parsed url   hostname: null,
+129 verbose parsed url   hash: null,
+129 verbose parsed url   search: null,
+129 verbose parsed url   query: null,
+129 verbose parsed url   pathname: 'react-mixin@3.0.0',
+129 verbose parsed url   path: 'react-mixin@3.0.0',
+129 verbose parsed url   href: 'react-mixin@3.0.0' }
+130 verbose cache add [ 'react-router@1.0.0-rc3', null ]
+131 verbose cache add name=undefined spec="react-router@1.0.0-rc3" args=["react-router@1.0.0-rc3",null]
+132 verbose parsed url { protocol: null,
+132 verbose parsed url   slashes: null,
+132 verbose parsed url   auth: null,
+132 verbose parsed url   host: null,
+132 verbose parsed url   port: null,
+132 verbose parsed url   hostname: null,
+132 verbose parsed url   hash: null,
+132 verbose parsed url   search: null,
+132 verbose parsed url   query: null,
+132 verbose parsed url   pathname: 'react-router@1.0.0-rc3',
+132 verbose parsed url   path: 'react-router@1.0.0-rc3',
+132 verbose parsed url   href: 'react-router@1.0.0-rc3' }
+133 verbose cache add [ 'vinyl-buffer@1.0.0', null ]
+134 verbose cache add name=undefined spec="vinyl-buffer@1.0.0" args=["vinyl-buffer@1.0.0",null]
+135 verbose parsed url { protocol: null,
+135 verbose parsed url   slashes: null,
+135 verbose parsed url   auth: null,
+135 verbose parsed url   host: null,
+135 verbose parsed url   port: null,
+135 verbose parsed url   hostname: null,
+135 verbose parsed url   hash: null,
+135 verbose parsed url   search: null,
+135 verbose parsed url   query: null,
+135 verbose parsed url   pathname: 'vinyl-buffer@1.0.0',
+135 verbose parsed url   path: 'vinyl-buffer@1.0.0',
+135 verbose parsed url   href: 'vinyl-buffer@1.0.0' }
+136 verbose cache add [ 'vinyl-source-stream@1.1.0', null ]
+137 verbose cache add name=undefined spec="vinyl-source-stream@1.1.0" args=["vinyl-source-stream@1.1.0",null]
+138 verbose parsed url { protocol: null,
+138 verbose parsed url   slashes: null,
+138 verbose parsed url   auth: null,
+138 verbose parsed url   host: null,
+138 verbose parsed url   port: null,
+138 verbose parsed url   hostname: null,
+138 verbose parsed url   hash: null,
+138 verbose parsed url   search: null,
+138 verbose parsed url   query: null,
+138 verbose parsed url   pathname: 'vinyl-source-stream@1.1.0',
+138 verbose parsed url   path: 'vinyl-source-stream@1.1.0',
+138 verbose parsed url   href: 'vinyl-source-stream@1.1.0' }
+139 verbose cache add [ 'watchify@3.4.0', null ]
+140 verbose cache add name=undefined spec="watchify@3.4.0" args=["watchify@3.4.0",null]
+141 verbose parsed url { protocol: null,
+141 verbose parsed url   slashes: null,
+141 verbose parsed url   auth: null,
+141 verbose parsed url   host: null,
+141 verbose parsed url   port: null,
+141 verbose parsed url   hostname: null,
+141 verbose parsed url   hash: null,
+141 verbose parsed url   search: null,
+141 verbose parsed url   query: null,
+141 verbose parsed url   pathname: 'watchify@3.4.0',
+141 verbose parsed url   path: 'watchify@3.4.0',
+141 verbose parsed url   href: 'watchify@3.4.0' }
+142 verbose cache add [ 'autobind-decorator@1.3.2', null ]
+143 verbose cache add name=undefined spec="autobind-decorator@1.3.2" args=["autobind-decorator@1.3.2",null]
+144 verbose parsed url { protocol: null,
+144 verbose parsed url   slashes: null,
+144 verbose parsed url   auth: null,
+144 verbose parsed url   host: null,
+144 verbose parsed url   port: null,
+144 verbose parsed url   hostname: null,
+144 verbose parsed url   hash: null,
+144 verbose parsed url   search: null,
+144 verbose parsed url   query: null,
+144 verbose parsed url   pathname: 'autobind-decorator@1.3.2',
+144 verbose parsed url   path: 'autobind-decorator@1.3.2',
+144 verbose parsed url   href: 'autobind-decorator@1.3.2' }
+145 verbose cache add [ 'babel@5.8.23', null ]
+146 verbose cache add name=undefined spec="babel@5.8.23" args=["babel@5.8.23",null]
+147 verbose parsed url { protocol: null,
+147 verbose parsed url   slashes: null,
+147 verbose parsed url   auth: null,
+147 verbose parsed url   host: null,
+147 verbose parsed url   port: null,
+147 verbose parsed url   hostname: null,
+147 verbose parsed url   hash: null,
+147 verbose parsed url   search: null,
+147 verbose parsed url   query: null,
+147 verbose parsed url   pathname: 'babel@5.8.23',
+147 verbose parsed url   path: 'babel@5.8.23',
+147 verbose parsed url   href: 'babel@5.8.23' }
+148 verbose cache add name="gulp-util" spec="3.0.7" args=["gulp-util","3.0.7"]
+149 verbose parsed url { protocol: null,
+149 verbose parsed url   slashes: null,
+149 verbose parsed url   auth: null,
+149 verbose parsed url   host: null,
+149 verbose parsed url   port: null,
+149 verbose parsed url   hostname: null,
+149 verbose parsed url   hash: null,
+149 verbose parsed url   search: null,
+149 verbose parsed url   query: null,
+149 verbose parsed url   pathname: '3.0.7',
+149 verbose parsed url   path: '3.0.7',
+149 verbose parsed url   href: '3.0.7' }
+150 verbose addNamed [ 'gulp-util', '3.0.7' ]
+151 verbose addNamed [ '3.0.7', '3.0.7' ]
+152 silly lockFile 1ded5f4a-gulp-util-3-0-7 gulp-util@3.0.7
+153 verbose lock gulp-util@3.0.7 /home/maxpower/.npm/1ded5f4a-gulp-util-3-0-7.lock
+154 verbose cache add name="history" spec="1.12.5" args=["history","1.12.5"]
+155 verbose parsed url { protocol: null,
+155 verbose parsed url   slashes: null,
+155 verbose parsed url   auth: null,
+155 verbose parsed url   host: null,
+155 verbose parsed url   port: null,
+155 verbose parsed url   hostname: null,
+155 verbose parsed url   hash: null,
+155 verbose parsed url   search: null,
+155 verbose parsed url   query: null,
+155 verbose parsed url   pathname: '1.12.5',
+155 verbose parsed url   path: '1.12.5',
+155 verbose parsed url   href: '1.12.5' }
+156 verbose addNamed [ 'history', '1.12.5' ]
+157 verbose addNamed [ '1.12.5', '1.12.5' ]
+158 silly lockFile ebf5e6e5-history-1-12-5 history@1.12.5
+159 verbose lock history@1.12.5 /home/maxpower/.npm/ebf5e6e5-history-1-12-5.lock
+160 verbose cache add name="install" spec="0.1.8" args=["install","0.1.8"]
+161 verbose parsed url { protocol: null,
+161 verbose parsed url   slashes: null,
+161 verbose parsed url   auth: null,
+161 verbose parsed url   host: null,
+161 verbose parsed url   port: null,
+161 verbose parsed url   hostname: null,
+161 verbose parsed url   hash: null,
+161 verbose parsed url   search: null,
+161 verbose parsed url   query: null,
+161 verbose parsed url   pathname: '0.1.8',
+161 verbose parsed url   path: '0.1.8',
+161 verbose parsed url   href: '0.1.8' }
+162 verbose addNamed [ 'install', '0.1.8' ]
+163 verbose addNamed [ '0.1.8', '0.1.8' ]
+164 silly lockFile 584c81dc-install-0-1-8 install@0.1.8
+165 verbose lock install@0.1.8 /home/maxpower/.npm/584c81dc-install-0-1-8.lock
+166 verbose cache add name="re-base" spec="1.2.1" args=["re-base","1.2.1"]
+167 verbose parsed url { protocol: null,
+167 verbose parsed url   slashes: null,
+167 verbose parsed url   auth: null,
+167 verbose parsed url   host: null,
+167 verbose parsed url   port: null,
+167 verbose parsed url   hostname: null,
+167 verbose parsed url   hash: null,
+167 verbose parsed url   search: null,
+167 verbose parsed url   query: null,
+167 verbose parsed url   pathname: '1.2.1',
+167 verbose parsed url   path: '1.2.1',
+167 verbose parsed url   href: '1.2.1' }
+168 verbose addNamed [ 're-base', '1.2.1' ]
+169 verbose addNamed [ '1.2.1', '1.2.1' ]
+170 silly lockFile 90473ff5-re-base-1-2-1 re-base@1.2.1
+171 verbose lock re-base@1.2.1 /home/maxpower/.npm/90473ff5-re-base-1-2-1.lock
+172 verbose cache add name="react" spec="^15.0.0" args=["react","^15.0.0"]
+173 verbose parsed url { protocol: null,
+173 verbose parsed url   slashes: null,
+173 verbose parsed url   auth: null,
+173 verbose parsed url   host: null,
+173 verbose parsed url   port: null,
+173 verbose parsed url   hostname: null,
+173 verbose parsed url   hash: null,
+173 verbose parsed url   search: null,
+173 verbose parsed url   query: null,
+173 verbose parsed url   pathname: '^15.0.0',
+173 verbose parsed url   path: '^15.0.0',
+173 verbose parsed url   href: '^15.0.0' }
+174 verbose addNamed [ 'react', '^15.0.0' ]
+175 verbose addNamed [ null, '>=15.0.0-0 <16.0.0-0' ]
+176 silly lockFile b1d0cdb3-react-15-0-0 react@^15.0.0
+177 verbose lock react@^15.0.0 /home/maxpower/.npm/b1d0cdb3-react-15-0-0.lock
+178 verbose cache add name="react-addons-css-transition-group" spec="^15.0.0" args=["react-addons-css-transition-group","^15.0.0"]
+179 verbose parsed url { protocol: null,
+179 verbose parsed url   slashes: null,
+179 verbose parsed url   auth: null,
+179 verbose parsed url   host: null,
+179 verbose parsed url   port: null,
+179 verbose parsed url   hostname: null,
+179 verbose parsed url   hash: null,
+179 verbose parsed url   search: null,
+179 verbose parsed url   query: null,
+179 verbose parsed url   pathname: '^15.0.0',
+179 verbose parsed url   path: '^15.0.0',
+179 verbose parsed url   href: '^15.0.0' }
+180 verbose addNamed [ 'react-addons-css-transition-group', '^15.0.0' ]
+181 verbose addNamed [ null, '>=15.0.0-0 <16.0.0-0' ]
+182 silly lockFile fe6bffea-dons-css-transition-group-15-0-0 react-addons-css-transition-group@^15.0.0
+183 verbose lock react-addons-css-transition-group@^15.0.0 /home/maxpower/.npm/fe6bffea-dons-css-transition-group-15-0-0.lock
+184 verbose cache add name="react-dom" spec="^15.0.0" args=["react-dom","^15.0.0"]
+185 verbose parsed url { protocol: null,
+185 verbose parsed url   slashes: null,
+185 verbose parsed url   auth: null,
+185 verbose parsed url   host: null,
+185 verbose parsed url   port: null,
+185 verbose parsed url   hostname: null,
+185 verbose parsed url   hash: null,
+185 verbose parsed url   search: null,
+185 verbose parsed url   query: null,
+185 verbose parsed url   pathname: '^15.0.0',
+185 verbose parsed url   path: '^15.0.0',
+185 verbose parsed url   href: '^15.0.0' }
+186 verbose addNamed [ 'react-dom', '^15.0.0' ]
+187 verbose addNamed [ null, '>=15.0.0-0 <16.0.0-0' ]
+188 silly lockFile 07f24579-react-dom-15-0-0 react-dom@^15.0.0
+189 verbose lock react-dom@^15.0.0 /home/maxpower/.npm/07f24579-react-dom-15-0-0.lock
+190 verbose cache add name="react-catalyst" spec="0.3.0" args=["react-catalyst","0.3.0"]
+191 verbose parsed url { protocol: null,
+191 verbose parsed url   slashes: null,
+191 verbose parsed url   auth: null,
+191 verbose parsed url   host: null,
+191 verbose parsed url   port: null,
+191 verbose parsed url   hostname: null,
+191 verbose parsed url   hash: null,
+191 verbose parsed url   search: null,
+191 verbose parsed url   query: null,
+191 verbose parsed url   pathname: '0.3.0',
+191 verbose parsed url   path: '0.3.0',
+191 verbose parsed url   href: '0.3.0' }
+192 verbose addNamed [ 'react-catalyst', '0.3.0' ]
+193 verbose addNamed [ '0.3.0', '0.3.0' ]
+194 silly lockFile f6621941-react-catalyst-0-3-0 react-catalyst@0.3.0
+195 verbose lock react-catalyst@0.3.0 /home/maxpower/.npm/f6621941-react-catalyst-0-3-0.lock
+196 verbose cache add name="react-mixin" spec="3.0.0" args=["react-mixin","3.0.0"]
+197 verbose parsed url { protocol: null,
+197 verbose parsed url   slashes: null,
+197 verbose parsed url   auth: null,
+197 verbose parsed url   host: null,
+197 verbose parsed url   port: null,
+197 verbose parsed url   hostname: null,
+197 verbose parsed url   hash: null,
+197 verbose parsed url   search: null,
+197 verbose parsed url   query: null,
+197 verbose parsed url   pathname: '3.0.0',
+197 verbose parsed url   path: '3.0.0',
+197 verbose parsed url   href: '3.0.0' }
+198 verbose addNamed [ 'react-mixin', '3.0.0' ]
+199 verbose addNamed [ '3.0.0', '3.0.0' ]
+200 silly lockFile 2c57c9af-react-mixin-3-0-0 react-mixin@3.0.0
+201 verbose lock react-mixin@3.0.0 /home/maxpower/.npm/2c57c9af-react-mixin-3-0-0.lock
+202 verbose cache add name="react-router" spec="1.0.0-rc3" args=["react-router","1.0.0-rc3"]
+203 verbose parsed url { protocol: null,
+203 verbose parsed url   slashes: null,
+203 verbose parsed url   auth: null,
+203 verbose parsed url   host: null,
+203 verbose parsed url   port: null,
+203 verbose parsed url   hostname: null,
+203 verbose parsed url   hash: null,
+203 verbose parsed url   search: null,
+203 verbose parsed url   query: null,
+203 verbose parsed url   pathname: '1.0.0-rc3',
+203 verbose parsed url   path: '1.0.0-rc3',
+203 verbose parsed url   href: '1.0.0-rc3' }
+204 verbose addNamed [ 'react-router', '1.0.0-rc3' ]
+205 verbose addNamed [ '1.0.0-rc3', '1.0.0-rc3' ]
+206 silly lockFile 3808af31-react-router-1-0-0-rc3 react-router@1.0.0-rc3
+207 verbose lock react-router@1.0.0-rc3 /home/maxpower/.npm/3808af31-react-router-1-0-0-rc3.lock
+208 verbose cache add name="vinyl-buffer" spec="1.0.0" args=["vinyl-buffer","1.0.0"]
+209 verbose parsed url { protocol: null,
+209 verbose parsed url   slashes: null,
+209 verbose parsed url   auth: null,
+209 verbose parsed url   host: null,
+209 verbose parsed url   port: null,
+209 verbose parsed url   hostname: null,
+209 verbose parsed url   hash: null,
+209 verbose parsed url   search: null,
+209 verbose parsed url   query: null,
+209 verbose parsed url   pathname: '1.0.0',
+209 verbose parsed url   path: '1.0.0',
+209 verbose parsed url   href: '1.0.0' }
+210 verbose addNamed [ 'vinyl-buffer', '1.0.0' ]
+211 verbose addNamed [ '1.0.0', '1.0.0' ]
+212 silly lockFile ca8e3468-vinyl-buffer-1-0-0 vinyl-buffer@1.0.0
+213 verbose lock vinyl-buffer@1.0.0 /home/maxpower/.npm/ca8e3468-vinyl-buffer-1-0-0.lock
+214 verbose cache add name="vinyl-source-stream" spec="1.1.0" args=["vinyl-source-stream","1.1.0"]
+215 verbose parsed url { protocol: null,
+215 verbose parsed url   slashes: null,
+215 verbose parsed url   auth: null,
+215 verbose parsed url   host: null,
+215 verbose parsed url   port: null,
+215 verbose parsed url   hostname: null,
+215 verbose parsed url   hash: null,
+215 verbose parsed url   search: null,
+215 verbose parsed url   query: null,
+215 verbose parsed url   pathname: '1.1.0',
+215 verbose parsed url   path: '1.1.0',
+215 verbose parsed url   href: '1.1.0' }
+216 verbose addNamed [ 'vinyl-source-stream', '1.1.0' ]
+217 verbose addNamed [ '1.1.0', '1.1.0' ]
+218 silly lockFile 8ee6baed-vinyl-source-stream-1-1-0 vinyl-source-stream@1.1.0
+219 verbose lock vinyl-source-stream@1.1.0 /home/maxpower/.npm/8ee6baed-vinyl-source-stream-1-1-0.lock
+220 verbose cache add name="watchify" spec="3.4.0" args=["watchify","3.4.0"]
+221 verbose parsed url { protocol: null,
+221 verbose parsed url   slashes: null,
+221 verbose parsed url   auth: null,
+221 verbose parsed url   host: null,
+221 verbose parsed url   port: null,
+221 verbose parsed url   hostname: null,
+221 verbose parsed url   hash: null,
+221 verbose parsed url   search: null,
+221 verbose parsed url   query: null,
+221 verbose parsed url   pathname: '3.4.0',
+221 verbose parsed url   path: '3.4.0',
+221 verbose parsed url   href: '3.4.0' }
+222 verbose addNamed [ 'watchify', '3.4.0' ]
+223 verbose addNamed [ '3.4.0', '3.4.0' ]
+224 silly lockFile b6e75153-watchify-3-4-0 watchify@3.4.0
+225 verbose lock watchify@3.4.0 /home/maxpower/.npm/b6e75153-watchify-3-4-0.lock
+226 verbose cache add name="autobind-decorator" spec="1.3.2" args=["autobind-decorator","1.3.2"]
+227 verbose parsed url { protocol: null,
+227 verbose parsed url   slashes: null,
+227 verbose parsed url   auth: null,
+227 verbose parsed url   host: null,
+227 verbose parsed url   port: null,
+227 verbose parsed url   hostname: null,
+227 verbose parsed url   hash: null,
+227 verbose parsed url   search: null,
+227 verbose parsed url   query: null,
+227 verbose parsed url   pathname: '1.3.2',
+227 verbose parsed url   path: '1.3.2',
+227 verbose parsed url   href: '1.3.2' }
+228 verbose addNamed [ 'autobind-decorator', '1.3.2' ]
+229 verbose addNamed [ '1.3.2', '1.3.2' ]
+230 silly lockFile 8e1252b6-autobind-decorator-1-3-2 autobind-decorator@1.3.2
+231 verbose lock autobind-decorator@1.3.2 /home/maxpower/.npm/8e1252b6-autobind-decorator-1-3-2.lock
+232 verbose cache add name="babel" spec="5.8.23" args=["babel","5.8.23"]
+233 verbose parsed url { protocol: null,
+233 verbose parsed url   slashes: null,
+233 verbose parsed url   auth: null,
+233 verbose parsed url   host: null,
+233 verbose parsed url   port: null,
+233 verbose parsed url   hostname: null,
+233 verbose parsed url   hash: null,
+233 verbose parsed url   search: null,
+233 verbose parsed url   query: null,
+233 verbose parsed url   pathname: '5.8.23',
+233 verbose parsed url   path: '5.8.23',
+233 verbose parsed url   href: '5.8.23' }
+234 verbose addNamed [ 'babel', '5.8.23' ]
+235 verbose addNamed [ '5.8.23', '5.8.23' ]
+236 silly lockFile e71331eb-babel-5-8-23 babel@5.8.23
+237 verbose lock babel@5.8.23 /home/maxpower/.npm/e71331eb-babel-5-8-23.lock
+238 silly lockFile 1ded5f4a-gulp-util-3-0-7 gulp-util@3.0.7
+239 error Error: Attempt to unlock gulp-util@3.0.7, which hasn't been locked
+239 error     at unlock (/package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/lib/utils/locker.js:44:11)
+239 error     at cb (/package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/lib/cache/add-named.js:32:5)
+239 error     at /package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/lib/cache/add-named.js:41:20
+239 error     at /package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/lib/utils/locker.js:30:7
+239 error     at cb (/package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+239 error     at /package/host/localhost/nodejs-0.10.43/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+239 error     at Object.oncomplete (fs.js:108:15)
+240 error If you need help, you may report this *entire* log,
+240 error including the npm and node versions, at:
+240 error     <http://github.com/npm/npm/issues>
+241 error System Linux 2.6.32-642.4.2.el6.x86_64
+242 error command "/package/host/localhost/nodejs-0.10.43/bin/node" "/usr/local/bin/npm" "install"
+243 error cwd /var/www/virtual/maxpower/html/App/root/app
+244 error node -v v0.10.43
+245 error npm -v 1.4.29
+246 verbose exit [ 1, true ]
