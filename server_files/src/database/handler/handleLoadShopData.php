@@ -9,6 +9,19 @@ function handleLoadShopData() {
 	$fullOrders = $filter->getOrders();
 	$shop_name = $shop->getName();
 
+	$page = 1;
+
+	while (TRUE):
+		$filter->setPage($page + 1);
+		$ordersPerPage = $filter->getOrders();
+		if (count($ordersPerPage)) {
+			$fullOrders = array_merge($fullOrders, $ordersPerPage);
+			$page++;
+		} else {
+			break;
+		}
+	endwhile;
+
 
 	$db = new Database();
 
