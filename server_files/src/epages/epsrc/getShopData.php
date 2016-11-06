@@ -4,8 +4,11 @@ function getShopData () {
 
 	global $shop;
 
-	$currencies = new ep6\Currencies();
-	$default = $currencies->getDefault();
+	
+	$filter = new ep6\OrderFilter();
+	$filter->setResultsPerPage(100);
+	$fullOrders = $filter->getOrders();
+	// $defaultCurrency = $currencies->getDefault();
 
-	return (string) $default;
+	return var_dump($fullOrders[10]);
 }

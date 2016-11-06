@@ -64,7 +64,7 @@ class Login extends React.Component {
 						 		                type="password" name="loginPassword" id="idAccountPassword" className="validate fontSize"/>
 						 		<label htmlFor="idAccountPassword">Passwort</label>
 					 		</div>
-					 		<button type="submit" className="btnGreen">Einloggen</button>
+					 		<button type="submit" className="btnGreen btn waves-effect waves-light">Einloggen</button>
 					 	</form>
 					 	<div className="normalFont textColorGray">
 					 		<span>Sie haben noch keinen Zugang angelegt? </span>

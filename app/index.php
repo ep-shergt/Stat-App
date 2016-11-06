@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="build/css/c3.css">
     <link rel="stylesheet" href="build/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:700">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
   </head>
   <body>
     <div id="navigation"></div>

@@ -2,11 +2,15 @@
 // Routes
 
 $app->post('/allorders', function ($request, $response, $args) {
-    return  getAllOrders();
+    return  handleLoadShopData();
 });
 
-$app->get('/shopdata', function ($request, $response, $args) {
-    return 'Shopdaten: ' . getShopData();
+$app->post('/weeklysales', function ($request, $response, $args) {
+    return  getWeeklySales();
+});
+
+$app->post('/shopdata', function ($request, $response, $args) {
+    return handleLoadShopData();
 });
 
 $app->post('/registration', function ($request, $response, $args) {

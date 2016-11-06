@@ -64,17 +64,18 @@ class Registration extends React.Component {
 						<form onSubmit={(e) => this.handleRegistrationData(e)}>
 							<div className="input-field col s6 textAlignLeft">
 								<input title="Keine Zahlen, Schrägstriche oder Klammern" ref={(input) => { this.regFirstName = input}}
-								       type="text" required pattern="^[^0-9(){}/\]+$" name="regFirstName" id="idRegFirstName" className="validate fontSize"/>
+								       type="text" required pattern="^[^0-9(){}]+$" name="regFirstName" id="idRegFirstName" className="validate fontSize"/>
 								<label htmlFor="idRegFirstName">Vorname</label>
 							</div>
 							<div className="input-field col s6 textAlignLeft">
 								<input title="Keine Zahlen, Schrägstriche oder Klammern" ref={(input) => { this.regLastName = input}}
-								       type="text" required pattern="^[^0-9(){}/\]+$" name="regLastName" id="idRegLastName" className="validate fontSize"/>
+		
+								       type="text" required pattern="^[^0-9(){}]+$" name="regLastName" id="idRegLastName" className="validate fontSize"/>
 								<label htmlFor="idRegLastName">Name</label>
 							</div>
 							<div className="input-field col s12 textAlignLeft">
 								<input title="Bitte geben Sie ihre Email-Adresse ein" ref={(input) => { this.regEmail = input}}
-								       type="text" required name="regEmail" id="idRegEmail" className="validate fontSize"/>
+								       type="email" required name="regEmail" id="idRegEmail" className="validate fontSize"/>
 								<label htmlFor="idRegUser">Email-Adresse</label>
 							</div>
 							<div className="input-field col s12 textAlignLeft">
@@ -87,7 +88,7 @@ class Registration extends React.Component {
 								       type="password" required pattern=".{6,}" name="regConfirmPw" id="idRegConfirmPw" className="validate fontSize"/>
 								<label htmlFor="idRegConfirmPw">Passwort wiederholen</label>
 							</div>
-							<button type="submit" className="btnGreen">Registrieren</button>
+							<button type="submit" className="btn waves-effect waves-light btnGreen">Registrieren</button>
 						</form>
 						<div id="idRegError">
 							<p>Username ist leider schon vergeben. Bitte wählen Sie einen anderen Usernamen aus?</p>
