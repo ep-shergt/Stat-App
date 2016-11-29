@@ -1,14 +1,11 @@
 <?php
 
 function handleLoadShopData() {
-<<<<<<< HEAD
 	// create database object
 	$db = new Database();
 	// get shop access data from database
-	$getShopDataRows = $db->getRows("SELECT tbl_shop.shop_url, tbl_shop.epages_shop_id, tbl_shop.access_token
-									 FROM (tbl_shop, tbl_users)
-									 WHERE tbl_shop.user_id = tbl_users.user_id AND tbl_users.email = ?",
-									 [$_SESSION['email']]);
+	$getShopDataRows = $db->getRows("SELECT tbl_shop.shop_url, tbl_shop.epages_shop_id, tbl_shop.access_token FROM (tbl_shop, tbl_users)
+										 WHERE tbl_shop.user_id = tbl_users.user_id AND tbl_users.email = ?", [$_SESSION['email']]);
 	// assign access data to variables
 	$devshopurl = $getShopDataRows[0]['shop_url'];
 	$epagesshopid = $getShopDataRows[0]['epages_shop_id'];
@@ -25,10 +22,8 @@ function handleLoadShopData() {
 		// delete all orders belonging to the shop and all shop-customer related info (not the customers!)
 		$db->deleteRow("DELETE tbl_orders FROM tbl_orders JOIN tbl_shop ON tbl_orders.shop_id = tbl_shop.shop_id
 						WHERE tbl_shop.access_token = ?", [$accesstoken]);
-		$db->deleteRow("DELETE tbl_shop_customer FROM tbl_shop_customer JOIN tbl_customer
-						ON tbl_shop_customer.customer_id = tbl_customer.customer_id
-		 				JOIN tbl_shop ON tbl_shop_customer.shop_id = tbl_shop.shop_id WHERE tbl_shop.access_token = ?",
-		 				[$accesstoken]);
+		$db->deleteRow("DELETE tbl_shop_customer FROM tbl_shop_customer JOIN tbl_customer ON tbl_shop_customer.customer_id = tbl_customer.customer_id
+		 				JOIN tbl_shop ON tbl_shop_customer.shop_id = tbl_shop.shop_id WHERE tbl_shop.access_token = ?", [$accesstoken]);
 	}
 
 	// loop over all available currencies in the shop
@@ -60,53 +55,10 @@ function handleLoadShopData() {
 	 		$customer_email = $order->getBillingAddress()->getEmailAddress();
 	 		$firstname = $order->getBillingAddress()->getFirstName();
 	 		$lastname = $order->getBillingAddress()->getLastName();
-=======
-
-	global $shop;
-
-	$filter = new ep6\OrderFilter();
-	$filter->setResultsPerPage(100);
-	$fullOrders = $filter->getOrders();
-	$shop_name = $shop->getName();
-
-	$page = 1;
-
-	while (TRUE):
-		$filter->setPage($page + 1);
-		$ordersPerPage = $filter->getOrders();
-		if (count($ordersPerPage)) {
-			$fullOrders = array_merge($fullOrders, $ordersPerPage);
-			$page++;
-		} else {
-			break;
-		}
-	endwhile;
-
-
-	$db = new Database();
-
-	$getShopRow = $db->getRow("SELECT * FROM tbl_shop WHERE shop_name = ?", [$shop_name]);
-
-	if ($getShopRow) {
-		$db->deleteRow("DELETE FROM tbl_orders WHERE shop_id = (SELECT shop_id FROM tbl_shop WHERE shop_name = ?)", [$shop_name]);
-		$db->deleteRow("DELETE FROM tbl_customer WHERE shop_id = (SELECT shop_id FROM tbl_shop WHERE shop_name = ?)", [$shop_name]);
-		$db->deleteRow("DELETE FROM tbl_shop WHERE shop_name = ?", [$shop_name]);
-	} 
-
-	$db->insertRow("INSERT INTO tbl_shop (shop_id, user_id, shop_name)
-	 			    VALUES (?, (SELECT user_id FROM tbl_users WHERE email = 'max'),?)", ["1", $shop_name]);
-
-
-	
-	foreach ($fullOrders as $order) {
-	 	if ($order->isPaid()) {
-	 		$customer_email = $order->getBillingAddress()->getEmailAddress();
->>>>>>> be1c222dfef7c15c8162b123601d761385303ab3
 			$customer_zip = $order->getBillingAddress()->getZipCode();
 			$customer_city = $order->getBillingAddress()->getCity();
 			$order_id = $order->getID();
 			$sales_with_tax = $order->getTotalPrice()->getAmount();
-<<<<<<< HEAD
 			$sales_without_tax = $order->getTotalPriceWithoutTax()->getAmount();
 			$order_currency = $order->getTotalPrice()->getCurrency();
 			// get all customers from the database with the email address of the order
@@ -115,11 +67,9 @@ function handleLoadShopData() {
 			$getAddressCustomerRow = $db->getRow("SELECT * FROM tbl_locations WHERE zip_code = ?
 												  AND location = ? ", [$customer_zip, $customer_city]);
 			// get all shop-customer relations from database with the email address from the shop's order
-			$getShopCustomerRow = $db->getRow("SELECT * FROM tbl_shop_customer JOIN tbl_customer
-											   ON tbl_shop_customer.customer_id = tbl_customer.customer_id
+			$getShopCustomerRow = $db->getRow("SELECT * FROM tbl_shop_customer JOIN tbl_customer ON tbl_shop_customer.customer_id = tbl_customer.customer_id
 			 								   JOIN tbl_shop ON tbl_shop_customer.shop_id = tbl_shop.shop_id
-			 								   WHERE tbl_customer.customer_email = ? AND tbl_shop.access_token = ?",
-			 								   [$customer_email, $accesstoken]);
+			 								   WHERE tbl_customer.customer_email = ? AND tbl_shop.access_token = ?", [$customer_email, $accesstoken]);
 			// check if customer exists in database
 			if (!$getCustomerRow) {
 				// check if address exists in database
@@ -137,8 +87,7 @@ function handleLoadShopData() {
 				// insert new customer data into database
 				$db->insertRow("INSERT INTO tbl_shop_customer (customer_id, shop_id) VALUES ((SELECT tbl_customer.customer_id
 								FROM tbl_customer WHERE customer_email = ?),
-								(SELECT tbl_shop.shop_id FROM tbl_shop WHERE tbl_shop.access_token = ?) )",
-								[$customer_email, $accesstoken]);
+								(SELECT tbl_shop.shop_id FROM tbl_shop WHERE tbl_shop.access_token = ?) )", [$customer_email, $accesstoken]);
 			}
 			// assign state_id 17 to all locations that are not linked to a state
 			$db->updateRow("UPDATE tbl_locations SET state_id = ? WHERE state_id IS NULL", [17]);
@@ -161,33 +110,7 @@ function handleLoadShopData() {
 			$db->insertRow("INSERT INTO tbl_orders (order_id, is_paid, shop_id, sales_with_tax, sales_without_tax, customer_id, currency, paydate, creationdate)
 	                		VALUES (?, ?, (SELECT shop_id FROM tbl_shop WHERE access_token = ?), ?, ?, (SELECT customer_id FROM tbl_customer
 	                		WHERE customer_email = ?), ?, ?, ?)",
-	                		[$order_id, $isPaid, $accesstoken, $sales_with_tax, $sales_without_tax, $customer_email,
-	                		 $order_currency, $payDate, $creationDate]);
+	                		[$order_id, $isPaid, $accesstoken, $sales_with_tax, $sales_without_tax, $customer_email, $order_currency, $payDate, $creationDate]);
 		}
 	}
-=======
-			$order_currency = $order->getTotalPrice()->getCurrency();
-			$timestamp = $order->getPayDate()->getTimestamp();
-			$payDate = date("Y-m-d", $timestamp);
-			$payDay = date("N", $timestamp);
-			$payDayPerMonth = date('j', $timestamp);
-			$payWeek = date("W", $timestamp);
-			$payMonth = date("n", $timestamp);
-			$payYear = date("Y", $timestamp);
-
-			$getCustomerRow = $db->getRow("SELECT * FROM tbl_customer WHERE customer_email = ?", [$customer_email]);
-
-			if(!$getCustomerRow) {
-				$db->insertRow("INSERT INTO tbl_customer (shop_id, customer_email) VALUES ((SELECT shop_id FROM tbl_shop WHERE shop_name = ?), ?)", [$shop_name, $customer_email]);
-			}
-
-			$db->insertRow("INSERT INTO tbl_orders (order_id, shop_id, sales_with_tax, customer_id, currency, paydate, payday, payday_per_month, payweek, paymonth, payyear)
-	                VALUES (?, (SELECT shop_id FROM tbl_shop WHERE shop_name = ?), ?, (SELECT customer_id FROM tbl_customer WHERE customer_email = ?), ?, ?, ?, ?, ?, ?, ?)",
-	                [$order_id, $shop_name, $sales_with_tax, $customer_email, $order_currency, $payDate, $payDay, $payDayPerMonth, $payWeek, $payMonth, $payYear]);
-	 		
-		}
-		
-	}
-
->>>>>>> be1c222dfef7c15c8162b123601d761385303ab3
 }
