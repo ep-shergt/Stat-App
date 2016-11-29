@@ -1,5 +1,5 @@
-export function testLog () {
-	var test = 'test';
+/**supporting file for extra functions**/
 
-	return test;
+export function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

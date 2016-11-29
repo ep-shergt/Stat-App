@@ -31,25 +31,42 @@ class Login extends React.Component {
 			url: "../server_files/public/index.php/login",
 			type: "POST",
 			data: login
-		}).done( (data) => {
-			if (Number(data)) {
-				//this.props.fillLoginData(login);
-				this.context.router.push('/userarea');
+		}).done((data) => {
+			console.log('rawlogindata: ', data);
+			var parsedData = JSON.parse(data),
+				d = new Date();
+
+			d.setTime(d.getTime() + 480*60*1000);
+
+			console.log('login: ', parsedData);
+
+			if (Number(parsedData[0])) {
+				const firstname = parsedData[1][0].firstname,
+					  lastname = parsedData[1][0].lastname,
+					  token = parsedData[2],
+					  fulltoken = firstname + ':' + lastname + ':' + token;
+
+				document.cookie = token + ';path=/;expires=' + d.toGMTString() + ';max-age='+480*60 + ';';
+				console.log(fulltoken);
+				this.context.router.push('/userarea/' + fulltoken);
 			} else {
 				$('#idLoginError').css("display", "block");
 			}
 		});
-
 	}
+
+	componentWillMount() {
+        $('body').css( "background-color", "white" );
+    }
 
   	render() {
 	    return (
 	    	<div className="page-wrap row">
 				<div className="container reduceWidth">
-					<div id="logo" className="marginTopLesser">StoreStats</div>
+					<div id="logo" className="marginTopLesser">StoreAnalyst</div>
 					<div className="marginTopLess loginText">
 						<span>Loggen Sie sich hier ein für Ihr Benutzerkonto bei </span>
-						<span className="storeStatsColor">StoreStats</span>
+						<span className="storeStatsColor">StoreAnalyst</span>
 						<br/>
 						<span className="textColorGray SmallFont">Volle Kontrolle über Ihr Geschäft mit nur einem Klick</span>
 						<form onSubmit={(e) => this.handleLoginData(e)}>
@@ -64,7 +81,7 @@ class Login extends React.Component {
 						 		                type="password" name="loginPassword" id="idAccountPassword" className="validate fontSize"/>
 						 		<label htmlFor="idAccountPassword">Passwort</label>
 					 		</div>
-					 		<button type="submit" className="btnGreen">Einloggen</button>
+					 		<button type="submit" className="btnGreen btn waves-effect waves-light">Einloggen</button>
 					 	</form>
 					 	<div className="normalFont textColorGray">
 					 		<span>Sie haben noch keinen Zugang angelegt? </span>
@@ -72,7 +89,7 @@ class Login extends React.Component {
 
 					 	</div>
 						<div id="idLoginError">
-							<p>Email oder Passwort inkorrekt. Sie sind noch nicht registriert?</p>
+							<p>Email oder Passwort inkorrekt. Sind sie schon registriert?</p>
 						</div>
 					</div>
 				</div>

@@ -59,12 +59,12 @@ require __DIR__ . "/config.php";
 		}
 
 		//update row
-		public function updateRow () {
+		public function updateRow ($query, $params = []) {
 			$this->insertRow($query, $params);
 		}
 
 		//delete row
-		public function deleteRow () {
+		public function deleteRow ($query, $params = []) {
 			$this->insertRow($query, $params);
 		}
 

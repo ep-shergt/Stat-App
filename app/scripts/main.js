@@ -2,19 +2,9 @@ import React  from 'react';
 import { render }  from 'react-dom';
 
 import RoutedContent from './components/RoutedContent';
-import Footer from './components/Footer';
-import Navigation from './components/Navigation';
 
+/* render the Base Component that contains all other child components.
+The displayed component will depend on the "route or url defined for the component"*/
 render(
     <RoutedContent/>, document.querySelector('#main')
 );
-//
-render(
-	<Navigation home="Diagrams" aboutme="About me" startpage="Start Page"/>,
-	document.getElementById('navigation')
-);
-
-// render(
-// 	<Footer footerContent="Footer Content" linkOne="Link 1" linkTwo="Link 2" linkThree="Link 3" linkFour="Link 4"/>,
-// 	document.getElementById('footer')
-// );
